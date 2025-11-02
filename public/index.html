@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Thesis Helper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Academic Thesis Helper</h1>
+        <p class="subtitle">Generate a structured outline, then draft sections contextually.</p>
+        
+        <div id="step-1" class="step-container">
+            <h2>Step 1: Define Your Thesis</h2>
+            <form id="outline-form" class="ai-form">
+                <input type="text" id="topic-input" placeholder="Thesis Topic (e.g., Impact of AI on Job Markets)" required>
+                <textarea id="keywords-input" placeholder="Key Ideas/Keywords (e.g., automation, skill gap, future training)" rows="3"></textarea>
+                <button type="submit" id="outline-button">Generate Outline</button>
+            </form>
+        </div>
+
+        <div id="loading-indicator" class="loading" style="display: none;">
+            <p>🤖 Generating response, please wait...</p>
+        </div>
+
+        <div id="step-2" class="step-container" style="display: none;">
+            <h2>Step 2: Select a Section to Draft</h2>
+            <div id="outline-display" class="result-box">
+                </div>
+            <p class="instruction">Click any line in the outline above to generate a draft paragraph for that specific section.</p>
+            
+            <div id="draft-output" class="result-box draft-area">
+                <p>Drafted section will appear here.</p>
+            </div>
+        </div>
+
+        <div id="error-message" class="error-box" style="display: none;"></div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
